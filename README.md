@@ -1,5 +1,12 @@
 # Django REST-based Authentication
 
+The repository is split into two branches:
+
+1. `master` -- basic authentication + social authentication
+2. `basic` -- basic authentication only
+
+If you do not wish to use social authentication make sure to switch to the `basic` branch.
+
 ## Want to learn how to build this?
 
 Check out the [post](#).
@@ -37,6 +44,38 @@ Check out the [post](#).
     EMAIL_HOST_PASSWORD = "<your email password>"
     DEFAULT_FROM_EMAIL = "<your default from email>"
     ```
+
+1. Register your app on Google and Twitter and take note of your client IDs and secrets. 
+
+1. Enter the client IDs and secrets in *core/settings.py* respectively:
+
+   ```python
+   SOCIALACCOUNT_PROVIDERS = {
+       "google": {
+           "APP": {
+               "client_id": "<your google client id>",
+               "secret": "<your google secret>",
+               "key": "",  # leave empty
+           },
+           "SCOPE": [
+               "profile",
+               "email",
+           ],
+           "AUTH_PARAMS": {
+               "access_type": "online",
+           },
+           "VERIFIED_EMAIL": True,
+       },
+       "twitter_oauth2": {
+           "APP": {
+               "client_id": "<your twitter client id>",
+               "secret": "<your twitter secret>",
+               "key": "",  # leave empty
+           },
+           "VERIFIED_EMAIL": True,
+       },
+   }
+   ```
 
 1. Run the server:
 

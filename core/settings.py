@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
+    "allauth.socialaccount.providers.twitter_oauth2",
     "dj_rest_auth",
     "dj_rest_auth.registration",
     "authentication.apps.AuthenticationConfig",
@@ -138,6 +140,32 @@ REST_FRAMEWORK = {
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_MAX_EMAIL_ADDRESSES = 2
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "APP": {
+            "client_id": "<your google client id>",
+            "secret": "<your google secret>",
+            "key": "",  # leave empty
+        },
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        },
+        "VERIFIED_EMAIL": True,
+    },
+    "twitter_oauth2": {
+        "APP": {
+            "client_id": "<your twitter client id>",
+            "secret": "<your twitter secret>",
+            "key": "",  # leave empty
+        },
+        "VERIFIED_EMAIL": True,
+    },
+}
 
 
 def append_trailing_slash(url):
