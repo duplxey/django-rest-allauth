@@ -1,9 +1,6 @@
 from django.http import HttpResponseRedirect
 
-from core.settings import (
-    EMAIL_CONFIRM_REDIRECT_BASE_URL,
-    PASSWORD_RESET_CONFIRM_REDIRECT_BASE_URL,
-)
+from core.settings import EMAIL_CONFIRM_REDIRECT_BASE_URL, PASSWORD_RESET_CONFIRM_REDIRECT_BASE_URL
 
 
 def email_confirm_redirect(request, key):
