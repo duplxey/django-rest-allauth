@@ -126,7 +126,6 @@ DEFAULT_FROM_EMAIL = "<your default from email>"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ]
 }
