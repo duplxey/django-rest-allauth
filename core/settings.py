@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
-    "allauth.socialaccount.providers.twitter_oauth2",
     "dj_rest_auth",
     "dj_rest_auth.registration",
     "authentication.apps.AuthenticationConfig",
@@ -128,7 +127,6 @@ DEFAULT_FROM_EMAIL = "<your default from email>"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ]
 }
@@ -156,15 +154,7 @@ SOCIALACCOUNT_PROVIDERS = {
             "access_type": "online",
         },
         "VERIFIED_EMAIL": True,
-    },
-    "twitter_oauth2": {
-        "APP": {
-            "client_id": "<your twitter client id>",
-            "secret": "<your twitter secret>",
-            "key": "",  # leave empty
-        },
-        "VERIFIED_EMAIL": True,
-    },
+    }
 }
 
 

@@ -45,7 +45,7 @@ Check out the [post](#).
     DEFAULT_FROM_EMAIL = "<your default from email>"
     ```
 
-1. Register your app on Google and Twitter and take note of your client IDs and secrets. 
+1. Register your app on Google and take note of your client ID and secret. 
 
 1. Enter the client IDs and secrets in *core/settings.py* respectively:
 
@@ -65,15 +65,7 @@ Check out the [post](#).
                "access_type": "online",
            },
            "VERIFIED_EMAIL": True,
-       },
-       "twitter_oauth2": {
-           "APP": {
-               "client_id": "<your twitter client id>",
-               "secret": "<your twitter secret>",
-               "key": "",  # leave empty
-           },
-           "VERIFIED_EMAIL": True,
-       },
+       }
    }
    ```
 
