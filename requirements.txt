@@ -6,7 +6,7 @@ cryptography==40.0.2
 defusedxml==0.7.1
 dj-rest-auth==4.0.0
 Django==4.2
-django-allauth==0.54.0
+django-allauth==0.52.0
 djangorestframework==3.14.0
 flake8==6.0.0
 idna==3.4
