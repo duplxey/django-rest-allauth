@@ -9,7 +9,7 @@ If you do not wish to use social authentication make sure to switch to the `basi
 
 ## Want to learn how to build this?
 
-Check out the [post](#).
+Check out the [post](https://testdriven.io/blog/django-rest-auth/).
 
 ## Want to use this project?
 
